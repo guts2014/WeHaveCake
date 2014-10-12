@@ -52,10 +52,10 @@ def getRoutes(USER): #UPDATE DATABASE *Done*
 		currentRoute.Time = Start
 		currentRoute.Username = Username
 		currentRoute.ID = ID
-		print(str(currentRoute.Node))
-		print(str(currentRoute.Time))
-		print(str(currentRoute.Username))
-		print(str(currentRoute.ID))
+		#print(str(currentRoute.Node))
+		#print(str(currentRoute.Time))
+		#print(str(currentRoute.Username))
+		#print(str(currentRoute.ID))
 
 
 		routes.append(currentRoute)
@@ -72,7 +72,7 @@ def stringify(routes):
 
 	for k in range(0, len(routes)-1):
 		stringy = stringy + routes[k].Node.replace(":", "")
-	print stringy
+	#print stringy
 	return stringy 	
 
 #This trio of subs is used to try and identify how similar a pair of route strings are.
@@ -103,7 +103,7 @@ def similarity(string1, string2):
 	longest_substring = long_substr([string1,string2])
 	
 	ratio = (len(longest_substring)/((len(string1)+len(string2))/2) * 100)
-	print("Ratio: " +str(ratio))
+	#print("Ratio: " +str(ratio))
 	if ratio  > 39:
 		return True
 	else:
@@ -135,7 +135,7 @@ def main():
 
 	usernames = getUsernames()
 
-	print(str(usernames))
+	#print(str(usernames))
 	
 	for i in range(0, len(usernames)):
 		for j in range(i, len(usernames)):
